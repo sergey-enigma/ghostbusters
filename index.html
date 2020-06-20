@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Ghostbusters: Afterlife</title>
 </head> 
@@ -110,10 +111,10 @@
     <section class="cast">
         <div class="container">
             <div class="tabs">
-                <h2 class="section-title active">Actors</h2>
-                <h2 class="section-title">Makers</h2>
+                <h2 class="tab section-title active" data-target="#actors">Actors</h2>
+                <h2 class="tab section-title" data-target="#makers">Makers</h2>
             </div>
-            <div class="tab-content">
+            <div class="tab-content visible" id="actors">
                 <div class="card">
                     <img src="img/actors/1.png" alt="Actor's name" class="card-image" />
                     <div class="card-text">
@@ -171,36 +172,68 @@
                     </div>
                 </div>
             </div>
+
+            <div class="tab-content" id="makers">
+                <div class="card">
+                    <img src="img/actors/1.png" alt="Actor's name" class="card-image" />
+                    <div class="card-text">
+                        <h3 class="name">Carrie Coon</h3>
+                        <span class="fullname">Carrie Alexandra Coon</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/actors/2.png" alt="Actor's name" class="card-image" />
+                    <div class="card-text">
+                        <h3 class="name">Bill Murray</h3>
+                        <span class="fullname">William James Murray</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="news">
         <div class="container">
             <h2 class="section-title section-news-title">Related News</h2>
-            <div class="news-cards">
-                <div class="news-card">
-                    <span class="news-date">March 31, 2020</span>
-                    <h3 class="news-title">"Morbius" and "Ghostbusters" are relocated to the next year</h3>
+
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="news-card">
+                            <span class="news-date">March 31, 2020</span>
+                            <h3 class="news-title">"Morbius" and "Ghostbusters" are relocated to the next year</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="news-card">
+                            <span class="news-date">December 9, 2019</span>
+                            <h3 class="news-title">Afterlife: The debut trailer for the new Ghostbusters is released.</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="news-card">
+                            <span class="news-date">November 11, 2019</span>
+                            <h3 class="news-title">New "Ghostbusters" got the name</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="news-card">
+                            <span class="news-date">October 19, 2019</span>
+                            <h3 class="news-title">Finished shooting the new "Ghostbusters"</h3>
+                        </div>
+                    </div>
                 </div>
-                <div class="news-card">
-                    <span class="news-date">December 9, 2019</span>
-                    <h3 class="news-title">Afterlife: The debut trailer for the new Ghostbusters is released.</h3>
-                </div>
-                <div class="news-card">
-                    <span class="news-date">November 11, 2019</span>
-                    <h3 class="news-title">New "Ghostbusters" got the name</h3>
-                </div>
-                <div class="news-card">
-                    <span class="news-date">October 19, 2019</span>
-                    <h3 class="news-title">Finished shooting the new "Ghostbusters"</h3>
-                </div>
+
+                <button class="button-next">
+                    <img src="img/arrow-right.svg" alt="Next news" />
+                </button>
             </div>
         </div>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
     <script src="js/script.js"></script>
-    
 </body>
 </html>

@@ -268,11 +268,18 @@ body {
     color: #363636;
 }
 
+.tab {
+    cursor: pointer;
+}
 .tab-content {
-    display: flex;
+    display: none;
     align-items: center;
     flex-wrap: wrap;
 }
+.tab-content.visible {
+    display: flex;
+}
+
 .card {
     display: flex;
     flex-basis: 25%;
@@ -329,6 +336,17 @@ body {
     margin-top: 14px;
 
     font-weight: 900;
+}
+.button-next {
+    display: none;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+    cursor: pointer;
 }
 
 @media (max-width: 1200px) {
@@ -478,6 +496,12 @@ body {
     .cast, .news {
         padding-top: 50px;
         padding-bottom: 70px;
+    }
+    .news-card {
+        max-width: 90%;
+    }
+    .button-next {
+        display: block;
     }
 }
 
